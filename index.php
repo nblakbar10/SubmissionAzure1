@@ -32,7 +32,7 @@
     $host = "dicodingappserver2.database.windows.net";
     $user = "dicoding";
     $pass = "poseidon123";
-    $db = "submission1web";
+    $db = "databasesubmission1";
     try {
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -46,7 +46,7 @@
             $prodi = $_POST['prodi'];
             ##$date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO submission1web (namalengkap, asalkampus, prodi)##, date) 
+            $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi)##, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $namalengkap);
@@ -60,7 +60,7 @@
         echo "<h3>Anda Telah Terdaftar!</h3>";
     } else if (isset($_GET['load_data'])) {
         try {
-            $sql_select = "SELECT * FROM submission1web";
+            $sql_select = "SELECT * FROM Registration";
             $stmt = $conn->query($sql_select);
             $registrants = $stmt->fetchAll(); 
             if(count($registrants) > 0) {
