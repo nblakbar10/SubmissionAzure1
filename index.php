@@ -41,10 +41,10 @@
     }
     if (isset($_POST['submit'])) {
         try {
-            $namalengkap = $_POST['namalengkap'];
-            $asalkampus = $_POST['asalkampus'];
-            $prodi = $_POST['prodi'];
-            $email = $_POST['email'];
+            $namalengkap = $_POST[':namalengkap'];
+            $asalkampus = $_POST[':asalkampus'];
+            $prodi = $_POST[':prodi'];
+            $email = $_POST[':email'];
             // Insert data
             $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi, email) 
                         VALUES (?,?,?,?)";
