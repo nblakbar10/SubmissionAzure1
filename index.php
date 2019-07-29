@@ -16,9 +16,9 @@
 				<input type="text" name="prodi"><br><br>
 			Email<br>
 				<input type="text" name="email"><br><br>
-			Jenis Kelamin<br>
-				<input type="radio" name="kelamin" value="pria"> Pria<br>
-				<input type="radio" name="kelamin" value="wanita"> Wanita<br><br>
+			//Jenis Kelamin<br>
+				//<input type="radio" name="kelamin" value="pria"> Pria<br>
+				//<input type="radio" name="kelamin" value="wanita"> Wanita<br><br>
 		</form>
 		<form method="post" action="">
 			<button type="submit" value="submit" name="submit">Submit</button>
@@ -44,7 +44,7 @@
             $namalengkap = $_POST['namalengkap'];
             $asalkampus = $_POST['asalkampus'];
             $prodi = $_POST['prodi'];
-            ##$date = date("Y-m-d");
+            $email = $_POST['email'];
             // Insert data
             $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi, email) 
                         VALUES (?,?,?,?)";
