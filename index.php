@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Form Kehadiran Peserta Seminar Informatika ITK 2019</title>
@@ -8,7 +7,7 @@
 	<div class="box">
 		<h2 align="left">Form Kehadiran Peserta Seminar Informatika ITK 2019</h2>
 		<h3 align="left">Silahkan isi form dibawah ini</h3>
-    </div>
+    	</div>
 		<form action="index.php" method="POST">
 			<label for="namalengkap">Nama Lengkap</label>
 				<input type="text" name="namalengkap" id="namalengkap" required=""><br><br>
