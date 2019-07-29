@@ -21,10 +21,10 @@
 				<input type="radio" name="kelamin" value="wanita"> Wanita<br><br>
 		</form>
 		<form method="post" action="">
-			<button type="submit" value="submit">Submit</button>
+			<button type="submit" value="submit" name="submit">Submit</button>
 		</form>
 		<form method="post" action="">
-			<button type="submit" value="lihatpeserta">Lihat Daftar Peserta</button>
+			<button type="submit" value="lihatpeserta" name="lihatpeserta">Lihat Daftar Peserta</button>
 		</form>
 	</div>
 
@@ -58,7 +58,7 @@
             echo "Failed: " . $e;
         }
         echo "<h3>Anda Telah Terdaftar!</h3>";
-    } else if (isset($_GET['load_data'])) {
+    } else if (isset($_GET['lihatpeserta'])) {
         try {
             $sql_select = "SELECT * FROM Registration";
             $stmt = $conn->query($sql_select);
