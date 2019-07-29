@@ -46,13 +46,13 @@
             $prodi = $_POST['prodi'];
             ##$date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi)##, date) 
+            $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi, email) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $namalengkap);
             $stmt->bindValue(2, $asalkampus);
             $stmt->bindValue(3, $prodi);
-            ##$stmt->bindValue(4, $date);
+            $stmt->bindValue(4, $email);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
@@ -66,10 +66,10 @@
             if(count($registrants) > 0) {
                 echo "<h2>Daftar Peserta Seminar Informatika 2019 yang telah terdaftar : </h2>";
                 echo "<table class='table table-hover'><thead>";
-                echo "<tr><th>Name</th>";
-                echo "<th>NIM</th>";
-                echo "<th>TKNB</th>";
-                echo "<th>Date</th></tr></thead><tbody>";
+                echo "<tr><th>Nama</th>";
+                echo "<th>Asal Kampus</th>";
+                echo "<th>Prodi/Jurusan/Fakultas</th>";
+                echo "<th>Email</th>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['namalengkap']."</td>";
                     echo "<td>".$registrant['asalkampus']."</td>";
