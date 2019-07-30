@@ -46,17 +46,17 @@ catch (PDOException $e) {
             $namalengkap = $_POST['namalengkap'];
             $asalkampus = $_POST['asalkampus'];
             $prodi = $_POST['prodi'];
-            $email = $_POST['email'];
+            ##$email = $_POST['email'];
 	    $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi, email, date) 
+            $sql_insert = "INSERT INTO Registration (namalengkap, asalkampus, prodi, date) 
                         VALUES (?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $namalengkap);
             $stmt->bindValue(2, $asalkampus);
             $stmt->bindValue(3, $prodi);
-            $stmt->bindValue(4, $email);
-            $stmt->bindValue(5, $date);
+            ##$stmt->bindValue(4, $email);
+            $stmt->bindValue(4, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
@@ -73,13 +73,13 @@ catch (PDOException $e) {
                 echo "<tr><th>Nama Lengkap</th>";
                 echo "<th>Asal Kampus</th>";
                 echo "<th>Prodi</th>";
-                echo "<th>Email</th></tr>";
+                ##echo "<th>Email</th></tr>";
 		echo "<th>Date</th></tr>";
                 foreach($registrants as $registrant) {
                     echo "<tr><td>".$registrant['namalengkap']."</td>";
                     echo "<td>".$registrant['asalkampus']."</td>";
                     echo "<td>".$registrant['prodi']."</td>";
-                    echo "<td>".$registrant['email']."</td></tr>";
+                    ##echo "<td>".$registrant['email']."</td></tr>";
 		    echo "<td>".$registrant['date']."</td></tr>";
                 }
                 echo "</table>";
