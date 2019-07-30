@@ -29,7 +29,7 @@
 
         <input type="submit" name="submit" value="Submit">
             </form>
-
+	<br>
             <form action="index.php" method="GET">
                 <input type="submit"  name="load_data" value="Lihat Daftar Peserta">
             </form>   
