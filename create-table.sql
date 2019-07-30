@@ -4,4 +4,5 @@ create table [dbo].[Registration](
     asalkampus VARCHAR(50),
     prodi VARCHAR(50),
     email VARCHAR(50),
+    date DATE
 );
