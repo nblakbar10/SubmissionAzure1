@@ -9,14 +9,22 @@
 		<h3 align="left">Silahkan isi form dibawah ini</h3>
     	</div>
 		<form action="index.php" method="POST">
+			<div>
 			<label for="namalengkap">Nama Lengkap</label>
 				<input type="text" name="namalengkap" id="namalengkap" required=""><br><br>
-			<label for="asalkampus">asalkampus</label>
+			</div>
+			<div>
+			<label for="asalkampus">Asal Kampus</label>
 				<input type="text" name="asalkampus" id="asalkampus" required=""><br><br>
+			</div>
+			<div>
 			<label for="prodi">Prodi/Jurusan/Email</label>
 				<input type="text" name="prodi" id="prodi" required=""><br><br>
+			</div>
+			<div>
 			<label for="email">Email</label>
 				<input type="text" name="email" id="email" required=""><br><br>
+			</div>
 		</form>
 
         <input type="submit" name="submit" value="Submit">
@@ -27,10 +35,10 @@
             </form>   
 
 	<?php
-	    $host = "serverwebappsubmission1.database.windows.net";
+	    $host = "serversubmission1.database.windows.net";
 	    $user = "dicoding";
 	    $pass = "poseidon123.";
-	    $db = "databasewebappsubmission1";
+	    $db = "databasesubmission1";
 	    try {
 		$conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
