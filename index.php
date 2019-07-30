@@ -31,11 +31,11 @@
 	    $user = "dicoding";
 	    $pass = "poseidon123.";
 	    $db = "databasesubmission1";
-    
-    // PHP Data Objects(PDO) Sample Code:
+  
+// PHP Data Objects(PDO) Sample Code:
 try {
-		$conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $conn = new PDO("sqlsrv:server = tcp:serversubmission1.database.windows.net,1433; Database = databasesubmission1", "dicoding", "{poseidon123.}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
