@@ -1,11 +1,25 @@
 <html>
  <head>
  <Title>Form Registrasi Seminar</Title>
+	 <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+            <!-- Bootstrap core CSS -->
+            <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+            <!-- Custom styles for this template -->
+            <link href="starter-template.css" rel="stylesheet">
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
  <style type="text/css">
  	body { background-color: #fff; border-top: solid 10px #000;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
  	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
  	}
+	 .navbar {
+            background-image: linear-gradient(to right, #1E9883, #FFFFFF);
+        }
+        .nav-link {
+            color : blue;
  	h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
@@ -16,6 +30,20 @@
  </style>
  </head>
  <body>
+	 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="https://webappsubmission1.azurewebsites.net/">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="https://webappsubmission1.azurewebsites.net/analisis.php">Analisis Gambar<span class="sr-only">(current)</span></a>
+			</li>
+		</div>
+		</nav>
  <h1>Seminar Nasional Informatika ITK 2019</h1>
  <p>Silahkan isi form dibawah ini, lalu tekan <strong>Submit</strong> untuk mendaftar.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
