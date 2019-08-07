@@ -7,7 +7,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=dicodingwebappnabil;AccountKey=Mrx6ph2+5QaBO/7AeJRRsotT2xwqoJ85Gllyhe4nfHA1ytmppqbDrCJcBVko+eQcJIXsYEwkTrDS3WEeQBdHFg==;EndpointSuffix=core.windows.net";
-$containerName = "containernabil";
+$containerName = "blockblobsazscdv";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
@@ -160,7 +160,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
                 <a class="nav-link" href="https://webappsubmission1.azurewebsites.net/">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="https://webappsubmission1.azurewebsites.net/analyze.php">Analisis<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://webappsubmission2.azurewebsites.net/">Analisis<span class="sr-only">(current)</span></a>
             </li>
         </div>
         </nav>
